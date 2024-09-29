@@ -2,7 +2,7 @@ import React from 'react'
 import { HiUser, HiPhone } from "react-icons/hi2";
 import css from "./ContatcItem.module.css";
 
-const ContactItem = ({data: {id,name,number}, onDelte}) => {
+const ContactItem = ({data: {id, name, number}, onDelete}) => {
   return (
     <div className={css.contactItem}>
       <div className='css.contactInfo'>
@@ -15,7 +15,7 @@ const ContactItem = ({data: {id,name,number}, onDelte}) => {
           <p>{number}</p>
         </div>
       </div>
-      <button className={css.deleteButton} onClick={()=> onDelte(id)}>Delete</button>
+      <button className={css.deleteButton} onClick={()=> onDelete(id)}>Delete</button>
     </div>
   )
 }

@@ -26,7 +26,7 @@ const App = () => {
   //Add Contacts//
    const addContact = (contact) => {
     setContacts((prevContacts) => {
-      return [...prevContacts, contact];
+      return [...prevContacts, contacts];
     });
   };
 
