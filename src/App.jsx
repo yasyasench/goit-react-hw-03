@@ -24,16 +24,15 @@ const App = () => {
   });
 
   //Add Contacts//
-   const addContact = (contact) => {
+   const addContact = (newContact) => {
     setContacts((prevContacts) => {
-      return [...prevContacts, contacts];
+      return [...prevContacts, newContact];
     });
   };
 
   //Search Contacts//
-  const [filter, setFilter] = useState("");
   const visibleContacts = contacts.filter((contact) =>
-    contact.name.toLowerCase().includes(filter.toLocaleLowerCase())
+    contact.name.toLowerCase().includes(filter.toLowerCase())
   );
 
 
