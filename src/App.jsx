@@ -31,6 +31,10 @@ const App = () => {
   };
 
   //Search Contacts//
+  const [filter, setFilter] = useState("");
+  useEffect(() => {
+    window.localStorage.setItem("contacts", JSON.stringify(contacts));
+  }, [contacts]);
   const visibleContacts = contacts.filter((contact) =>
     contact.name.toLowerCase().includes(filter.toLowerCase())
   );
