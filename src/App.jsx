@@ -3,8 +3,8 @@ import "./css/App.css";
 import { useState, useEffect } from 'react';
 
 import ContactForm from "./components/ContactForm/ContactForm"
-import Search from './components/Search/Search';
 import ContactList from './components/ContactList/ContactList';
+import SearchBox from './components/SearchBox/SearchBox';
 
 const initialContacts = [
     { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
@@ -52,7 +52,7 @@ const App = () => {
     <div>
       <h1>PhoneBook</h1>
       <ContactForm onAdd={addContact} />
-      <Search value={filter} onFilter={setFilter} />
+      <SearchBox value={filter} onFilter={setFilter} />
       < ContactList contacts={visibleContacts} onDelete={deleteContact} />
     </div>
   )

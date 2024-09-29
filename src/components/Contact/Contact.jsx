@@ -1,8 +1,8 @@
 import React from 'react'
 import { HiUser, HiPhone } from "react-icons/hi2";
-import css from "./ContatcItem.module.css";
+import css from "./Contact.module.css"
 
-const ContactItem = ({data: {id, name, number}, onDelete}) => {
+const Contact = ({data: {id, name, number}, onDelete}) => {
   return (
     <div className={css.contactItem}>
       <div className='css.contactInfo'>
@@ -20,4 +20,4 @@ const ContactItem = ({data: {id, name, number}, onDelete}) => {
   )
 }
 
-export default ContactItem
+export default Contact

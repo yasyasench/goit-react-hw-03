@@ -1,7 +1,7 @@
 import React from 'react'
-import css from "./Search.module.css"
+import css from "./SearchBox.module.css"
 
-const Search = ({value, onFilter}) => {
+const SearchBox = ({value, onFilter}) => {
   return (
     <div className={css.searchBox}>
       <label className={css.label}>Find contact by name</label>
@@ -15,4 +15,4 @@ const Search = ({value, onFilter}) => {
   )
 }
 
-export default Search
+export default SearchBox
