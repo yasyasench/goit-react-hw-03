@@ -2,11 +2,15 @@ import React from 'react';
 import ContactItem from '../ContactItem/ContactItem';
 import css from "./ContactList.module.css";
 
-const ContactList = () => {
+const ContactList = ({contacts, onDelete}) => {
   return (
-    <div>
-      <ContactItem/>
-    </div>
+    <ul className={css.list}>
+      {contacts.map((contact) => (
+        <li key={contact.id}>
+          <ContactItem data={contacts} onDelete={onDelete} />
+        </li>
+      ))}
+    </ul>
   )
 }
 
